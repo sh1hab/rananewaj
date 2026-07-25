@@ -1,545 +1,1183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Ayesha Chowdhury — Consultant Physician &amp; Diabetologist</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Bengali:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --green:#0B4F3C;
-    --green-dark:#073C2D;
-    --ivory:#FBF6EC;
-    --paper:#F5EFE1;
-    --maroon:#A13D2C;
-    --gold:#C08B3D;
-    --ink:#1F2420;
-    --ink-soft:#4B554E;
-    --line:rgba(31,36,32,0.14);
-    --radius:2px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--ivory);
-    color:var(--ink);
-    font-family:'IBM Plex Sans', sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  .bn{ font-family:'IBM Plex Sans Bengali','IBM Plex Sans',sans-serif; }
-  h1,h2,h3{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    margin:0;
-    color:var(--green-dark);
-    letter-spacing:-0.01em;
-  }
-  a{color:inherit;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
-  @media (max-width:640px){ .wrap{padding:0 20px;} }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Dr. S M Abu Newaz Rana — Consultant Physician &amp; </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Bengali:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --green: #0B4F3C;
+      --green-dark: #073C2D;
+      --ivory: #FBF6EC;
+      --paper: #F5EFE1;
+      --maroon: #A13D2C;
+      --gold: #C08B3D;
+      --ink: #1F2420;
+      --ink-soft: #4B554E;
+      --line: rgba(31, 36, 32, 0.14);
+      --radius: 2px;
+    }
 
-  /* subtle paper texture */
-  body::before{
-    content:"";
-    position:fixed;inset:0;
-    pointer-events:none;
-    z-index:0;
-    background-image:radial-gradient(circle at 1px 1px, rgba(11,79,60,0.05) 1px, transparent 0);
-    background-size:22px 22px;
-    opacity:0.5;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  /* ---------- NAV ---------- */
-  header{
-    position:sticky; top:0; z-index:50;
-    background:rgba(251,246,236,0.92);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 32px;
-    max-width:1120px; margin:0 auto;
-  }
-  .brand{display:flex; align-items:center; gap:12px;}
-  .brand-mark{
-    width:38px;height:38px;border-radius:50%;
-    border:1.5px solid var(--green);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Fraunces',serif; font-weight:600; color:var(--green);
-    font-size:14px;
-  }
-  .brand-name{font-family:'Fraunces',serif; font-size:17px; color:var(--green-dark); line-height:1.15;}
-  .brand-sub{font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft);}
-  nav ul{list-style:none; display:flex; gap:30px; margin:0; padding:0;}
-  nav ul li a{
-    font-size:14px; text-decoration:none; color:var(--ink-soft);
-    position:relative; padding-bottom:3px;
-  }
-  nav ul li a:hover{color:var(--green-dark);}
-  .nav-cta{
-    display:inline-block; background:var(--green); color:var(--ivory);
-    padding:10px 20px; font-size:13.5px; text-decoration:none;
-    border-radius:var(--radius); letter-spacing:0.01em;
-    border:1px solid var(--green);
-    transition:background .2s ease;
-  }
-  .nav-cta:hover{background:var(--green-dark);}
-  .nav-links-wrap{display:flex; align-items:center; gap:36px;}
-  .menu-btn{display:none; background:none;border:none;font-size:22px;color:var(--green-dark);cursor:pointer;}
-  @media (max-width:860px){
-    .nav-links-wrap ul{display:none;}
-    .menu-btn{display:block;}
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative; z-index:1;
-    padding:88px 0 96px;
-    overflow:hidden;
-  }
-  .hero-grid{
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:64px; align-items:center;
-  }
-  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr; gap:56px;} }
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:8px;
-    font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase;
-    color:var(--maroon); font-weight:600; margin-bottom:18px;
-  }
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--maroon);}
-  .hero h1{
-    font-size:clamp(38px,5.2vw,60px);
-    line-height:1.04;
-  }
-  .hero .bn-name{
-    font-size:clamp(18px,2vw,22px);
-    color:var(--ink-soft);
-    margin-top:10px;
-    font-weight:400;
-  }
-  .credentials-line{
-    margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:13px;
-    color:var(--green); letter-spacing:0.02em;
-  }
-  .hero p.lede{
-    margin-top:24px; max-width:46ch; color:var(--ink-soft); font-size:16.5px;
-  }
-  .hero-ctas{margin-top:34px; display:flex; gap:16px; flex-wrap:wrap;}
-  .btn-primary{
-    background:var(--maroon); color:var(--ivory); text-decoration:none;
-    padding:14px 26px; font-size:14.5px; letter-spacing:0.01em;
-    border-radius:var(--radius); border:1px solid var(--maroon);
-    transition:transform .15s ease, background .2s ease;
-    display:inline-block;
-  }
-  .btn-primary:hover{background:#8A3222; transform:translateY(-1px);}
-  .btn-secondary{
-    background:transparent; color:var(--green-dark); text-decoration:none;
-    padding:14px 22px; font-size:14.5px;
-    border-radius:var(--radius); border:1px solid var(--green-dark);
-    display:inline-block;
-  }
-  .btn-secondary:hover{background:rgba(11,79,60,0.06);}
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  .hero-stats{
-    display:flex; gap:36px; margin-top:48px; flex-wrap:wrap;
-  }
-  .hero-stats div{border-left:2px solid var(--gold); padding-left:14px;}
-  .hero-stats .num{font-family:'Fraunces',serif; font-size:26px; color:var(--green-dark);}
-  .hero-stats .label{font-size:12px; color:var(--ink-soft); letter-spacing:0.03em;}
+    .bn {
+      font-family: 'IBM Plex Sans Bengali', 'IBM Plex Sans', sans-serif;
+    }
 
-  /* Seal portrait */
-  .seal-wrap{position:relative; display:flex; justify-content:center;}
-  .seal{
-    position:relative; width:340px; height:340px; max-width:100%;
-  }
-  .seal-ring{
-    position:absolute; inset:0; border-radius:50%;
-    border:1.5px dashed var(--gold);
-    animation:spin 60s linear infinite;
-  }
-  .seal-ring svg{width:100%;height:100%;}
-  .seal-ring text{
-    font-family:'IBM Plex Sans Bengali',sans-serif;
-    font-size:11.5px; fill:var(--green-dark); letter-spacing:1.5px;
-  }
-  @keyframes spin{ to{ transform:rotate(360deg);} }
-  @media (prefers-reduced-motion: reduce){ .seal-ring{animation:none;} }
-  .seal-photo{
-    position:absolute; inset:28px; border-radius:50%;
-    background:linear-gradient(160deg,#DCE7DE,#C9D8CC);
-    border:3px solid var(--ivory);
-    box-shadow:0 0 0 1.5px var(--green);
-    display:flex; align-items:center; justify-content:center;
-    overflow:hidden;
-  }
-  .seal-photo .placeholder-figure{
-    width:70%; color:var(--green-dark); opacity:0.55;
-  }
-  .seal-badge{
-    position:absolute; bottom:6px; right:14px;
-    background:var(--green-dark); color:var(--ivory);
-    border-radius:50%; width:64px; height:64px;
-    display:flex; align-items:center; justify-content:center;
-    text-align:center; font-family:'Fraunces',serif; font-size:11px; line-height:1.2;
-    border:2px solid var(--ivory);
-  }
+    h1,
+    h2,
+    h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      margin: 0;
+      color: var(--green-dark);
+      letter-spacing: -0.01em;
+    }
 
-  /* ---------- SECTION LABEL ---------- */
-  .section{padding:96px 0; position:relative; z-index:1;}
-  .section-alt{background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
-  .section-head{max-width:640px; margin-bottom:56px;}
-  .section-head .eyebrow{margin-bottom:14px;}
-  .section-head h2{font-size:clamp(28px,3.4vw,38px);}
-  .section-head p{color:var(--ink-soft); margin-top:14px; font-size:15.5px;}
+    a {
+      color: inherit;
+    }
 
-  /* ---------- ABOUT ---------- */
-  .about-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:64px; align-items:start;}
-  @media (max-width:860px){ .about-grid{grid-template-columns:1fr;} }
-  .about-frame{
-    aspect-ratio:4/5; background:linear-gradient(160deg,#DCE7DE,#C9D8CC);
-    border:1px solid var(--line); position:relative; overflow:hidden;
-  }
-  .about-frame .placeholder-figure{
-    position:absolute; inset:0; margin:auto; width:44%; color:var(--green-dark); opacity:0.45;
-  }
-  .about-frame figcaption{
-    position:absolute; bottom:0; left:0; right:0;
-    background:rgba(7,60,45,0.88); color:var(--ivory);
-    padding:12px 16px; font-size:12.5px; letter-spacing:0.03em;
-  }
-  .about-body p{color:var(--ink-soft); margin:0 0 18px; font-size:15.5px;}
-  .timeline{margin-top:32px; border-top:1px solid var(--line);}
-  .timeline-row{
-    display:grid; grid-template-columns:110px 1fr; gap:20px;
-    padding:18px 0; border-bottom:1px solid var(--line);
-  }
-  .timeline-row .yr{font-family:'IBM Plex Mono',monospace; color:var(--maroon); font-size:13.5px;}
-  .timeline-row .what strong{display:block; color:var(--green-dark); font-size:15px; font-weight:600;}
-  .timeline-row .what span{font-size:13.5px; color:var(--ink-soft);}
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
 
-  /* ---------- SERVICES ---------- */
-  .service-grid{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
-    background:var(--line); border:1px solid var(--line);
-  }
-  @media (max-width:760px){ .service-grid{grid-template-columns:1fr 1fr;} }
-  @media (max-width:520px){ .service-grid{grid-template-columns:1fr;} }
-  .service-card{
-    background:var(--ivory); padding:34px 28px; min-height:200px;
-    display:flex; flex-direction:column; gap:14px;
-  }
-  .service-num{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold);}
-  .service-card h3{font-size:19px; color:var(--green-dark);}
-  .service-card p{font-size:13.8px; color:var(--ink-soft); margin:0;}
+    @media (max-width:640px) {
+      .wrap {
+        padding: 0 20px;
+      }
+    }
 
-  /* ---------- CHAMBER / PRESCRIPTION PAD ---------- */
-  .pad-wrap{display:flex; justify-content:center;}
-  .pad{
-    max-width:720px; width:100%;
-    background:#FFFDF6;
-    border:1px solid var(--line);
-    box-shadow:0 18px 40px -20px rgba(11,79,60,0.35);
-    position:relative;
-  }
-  .pad::before{
-    content:"";
-    position:absolute; top:-1px; left:0; right:0; height:14px;
-    background-image:radial-gradient(circle, var(--ivory) 5px, transparent 5.5px);
-    background-size:20px 20px; background-position:0 -6px;
-  }
-  .pad-head{
-    display:flex; justify-content:space-between; align-items:flex-start;
-    padding:34px 34px 18px; border-bottom:2px solid var(--green);
-  }
-  .pad-head .rx{
-    font-family:'Fraunces',serif; font-size:32px; color:var(--maroon); font-style:italic;
-  }
-  .pad-head .who{text-align:right;}
-  .pad-head .who strong{display:block; color:var(--green-dark); font-family:'Fraunces',serif; font-size:16px;}
-  .pad-head .who span{font-size:12px; color:var(--ink-soft);}
-  .pad-body{padding:26px 34px 34px;}
-  .chamber-row{
-    display:grid; grid-template-columns:1.3fr 1fr 0.9fr; gap:14px;
-    padding:16px 0; border-bottom:1px dashed var(--line); align-items:center;
-  }
-  @media (max-width:600px){ .chamber-row{grid-template-columns:1fr; gap:4px; padding:18px 0;} }
-  .chamber-row:last-child{border-bottom:none;}
-  .chamber-row .place strong{display:block; font-family:'Fraunces',serif; font-size:16.5px; color:var(--green-dark);}
-  .chamber-row .place span{font-size:12.8px; color:var(--ink-soft);}
-  .chamber-row .days{font-size:13px; color:var(--ink); font-weight:500;}
-  .chamber-row .time{
-    font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--maroon);
-    text-align:right;
-  }
-  @media (max-width:600px){ .chamber-row .time{text-align:left;} }
-  .pad-foot{
-    margin-top:8px; padding-top:18px; border-top:1px solid var(--line);
-    font-size:12.5px; color:var(--ink-soft); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
-  }
-  .pad-foot .stamp{
-    font-family:'IBM Plex Mono',monospace; color:var(--gold); letter-spacing:0.05em;
-  }
+    /* subtle paper texture */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(11, 79, 60, 0.05) 1px, transparent 0);
+      background-size: 22px 22px;
+      opacity: 0.5;
+    }
 
-  /* ---------- REVIEWS ---------- */
-  .review-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
-  @media (max-width:860px){ .review-grid{grid-template-columns:1fr;} }
-  .review-card{
-    background:var(--ivory); border:1px solid var(--line); padding:30px 26px;
-    display:flex; flex-direction:column; gap:16px;
-  }
-  .review-card .quote{font-size:15px; color:var(--ink); font-style:italic; font-family:'Fraunces',serif; font-weight:400;}
-  .review-who{display:flex; align-items:center; gap:12px; margin-top:auto;}
-  .review-avatar{
-    width:38px;height:38px;border-radius:50%; background:var(--paper); border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center; font-family:'Fraunces',serif; font-size:14px; color:var(--green-dark);
-  }
-  .review-who strong{display:block; font-size:13.5px;}
-  .review-who span{font-size:12px; color:var(--ink-soft);}
+    /* ---------- NAV ---------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 246, 236, 0.92);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
 
-  /* ---------- CONTACT ---------- */
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px;}
-  @media (max-width:860px){ .contact-grid{grid-template-columns:1fr;} }
-  .info-list{list-style:none; margin:28px 0 0; padding:0; display:flex; flex-direction:column; gap:22px;}
-  .info-list li{display:flex; gap:16px; align-items:flex-start;}
-  .info-list .ic{
-    width:34px;height:34px; border:1.5px solid var(--green); border-radius:50%;
-    display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--green-dark);
-  }
-  .info-list strong{display:block; font-size:14.5px; color:var(--green-dark);}
-  .info-list span{font-size:13.8px; color:var(--ink-soft);}
-  .map-box{
-    margin-top:28px; border:1px solid var(--line); background:
-      repeating-linear-gradient(45deg, rgba(11,79,60,0.05) 0 10px, transparent 10px 20px);
-    aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
-    color:var(--ink-soft); font-size:13px; text-align:center; padding:20px;
-  }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
 
-  form.appt{display:flex; flex-direction:column; gap:16px;}
-  .field{display:flex; flex-direction:column; gap:6px;}
-  .field label{font-size:12.5px; letter-spacing:0.03em; color:var(--ink-soft); text-transform:uppercase;}
-  .field input, .field select, .field textarea{
-    border:1px solid var(--line); background:#FFFDF6; padding:12px 14px;
-    font-family:'IBM Plex Sans',sans-serif; font-size:14.5px; color:var(--ink);
-    border-radius:var(--radius);
-  }
-  .field input:focus, .field select:focus, .field textarea:focus{
-    outline:2px solid var(--green); outline-offset:1px; border-color:var(--green);
-  }
-  .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  @media (max-width:480px){ .row2{grid-template-columns:1fr;} }
-  .submit-btn{
-    margin-top:6px; align-self:flex-start;
-    background:var(--green); color:var(--ivory); border:1px solid var(--green);
-    padding:14px 30px; font-size:14.5px; border-radius:var(--radius); cursor:pointer;
-  }
-  .submit-btn:hover{background:var(--green-dark);}
-  .form-note{font-size:12px; color:var(--ink-soft); margin-top:4px;}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-  /* ---------- FOOTER ---------- */
-  footer{
-    background:var(--green-dark); color:rgba(251,246,236,0.85);
-    padding:56px 0 28px; position:relative; z-index:1;
-  }
-  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; padding-bottom:32px; border-bottom:1px solid rgba(251,246,236,0.15);}
-  .footer-grid h3{color:var(--ivory); font-size:20px;}
-  .footer-grid .bn{font-size:13px; color:rgba(251,246,236,0.6); margin-top:4px;}
-  footer nav ul{list-style:none; padding:0; display:flex; gap:24px; flex-wrap:wrap;}
-  footer nav ul a{text-decoration:none; font-size:13.5px; color:rgba(251,246,236,0.75);}
-  footer nav ul a:hover{color:var(--ivory);}
-  .footer-bottom{
-    padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-    font-size:12px; color:rgba(251,246,236,0.55);
-  }
-  .emergency-strip{
-    background:var(--maroon); color:var(--ivory);
-    text-align:center; font-size:13px; padding:10px 16px;
-  }
-  .emergency-strip strong{font-family:'IBM Plex Mono',monospace; letter-spacing:0.02em;}
-</style>
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1.5px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      color: var(--green);
+      font-size: 14px;
+    }
+
+    .brand-name {
+      font-family: 'Fraunces', serif;
+      font-size: 17px;
+      color: var(--green-dark);
+      line-height: 1.15;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--ink-soft);
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    nav ul li a:hover {
+      color: var(--green-dark);
+    }
+
+    .nav-cta {
+      display: inline-block;
+      background: var(--green);
+      color: var(--ivory);
+      padding: 10px 20px;
+      font-size: 13.5px;
+      text-decoration: none;
+      border-radius: var(--radius);
+      letter-spacing: 0.01em;
+      border: 1px solid var(--green);
+      transition: background .2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--green-dark);
+    }
+
+    .nav-links-wrap {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 22px;
+      color: var(--green-dark);
+      cursor: pointer;
+    }
+
+    @media (max-width:860px) {
+      .nav-links-wrap ul {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 88px 0 96px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media (max-width:900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: var(--maroon);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.2vw, 60px);
+      line-height: 1.04;
+    }
+
+    .hero .bn-name {
+      font-size: clamp(18px, 2vw, 22px);
+      color: var(--ink-soft);
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    .credentials-line {
+      margin-top: 18px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--green);
+      letter-spacing: 0.02em;
+    }
+
+    .hero p.lede {
+      margin-top: 24px;
+      max-width: 46ch;
+      color: var(--ink-soft);
+      font-size: 16.5px;
+    }
+
+    .hero-ctas {
+      margin-top: 34px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--maroon);
+      color: var(--ivory);
+      text-decoration: none;
+      padding: 14px 26px;
+      font-size: 14.5px;
+      letter-spacing: 0.01em;
+      border-radius: var(--radius);
+      border: 1px solid var(--maroon);
+      transition: transform .15s ease, background .2s ease;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #8A3222;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--green-dark);
+      text-decoration: none;
+      padding: 14px 22px;
+      font-size: 14.5px;
+      border-radius: var(--radius);
+      border: 1px solid var(--green-dark);
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(11, 79, 60, 0.06);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats div {
+      border-left: 2px solid var(--gold);
+      padding-left: 14px;
+    }
+
+    .hero-stats .num {
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      color: var(--green-dark);
+    }
+
+    .hero-stats .label {
+      font-size: 12px;
+      color: var(--ink-soft);
+      letter-spacing: 0.03em;
+    }
+
+    /* Seal portrait */
+    .seal-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .seal {
+      position: relative;
+      width: 340px;
+      height: 340px;
+      max-width: 100%;
+    }
+
+    .seal-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1.5px dashed var(--gold);
+      animation: spin 60s linear infinite;
+    }
+
+    .seal-ring svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .seal-ring text {
+      font-family: 'IBM Plex Sans Bengali', sans-serif;
+      font-size: 11.5px;
+      fill: var(--green-dark);
+      letter-spacing: 1.5px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .seal-ring {
+        animation: none;
+      }
+    }
+
+    .seal-photo {
+      position: absolute;
+      inset: 28px;
+      border-radius: 50%;
+      background: linear-gradient(160deg, #DCE7DE, #C9D8CC);
+      border: 3px solid var(--ivory);
+      box-shadow: 0 0 0 1.5px var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .seal-photo .placeholder-figure {
+      width: 70%;
+      color: var(--green-dark);
+      opacity: 0.55;
+    }
+
+    .seal-badge {
+      position: absolute;
+      bottom: 6px;
+      right: 14px;
+      background: var(--green-dark);
+      color: var(--ivory);
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Fraunces', serif;
+      font-size: 11px;
+      line-height: 1.2;
+      border: 2px solid var(--ivory);
+    }
+
+    /* ---------- SECTION LABEL ---------- */
+    .section {
+      padding: 96px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-alt {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      max-width: 640px;
+      margin-bottom: 56px;
+    }
+
+    .section-head .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(28px, 3.4vw, 38px);
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      margin-top: 14px;
+      font-size: 15.5px;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    @media (max-width:860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-frame {
+      aspect-ratio: 4/5;
+      background: linear-gradient(160deg, #DCE7DE, #C9D8CC);
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-frame .placeholder-figure {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 44%;
+      color: var(--green-dark);
+      opacity: 0.45;
+    }
+
+    .about-frame figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(7, 60, 45, 0.88);
+      color: var(--ivory);
+      padding: 12px 16px;
+      font-size: 12.5px;
+      letter-spacing: 0.03em;
+    }
+
+    .about-body p {
+      color: var(--ink-soft);
+      margin: 0 0 18px;
+      font-size: 15.5px;
+    }
+
+    .timeline {
+      margin-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-row .yr {
+      font-family: 'IBM Plex Mono', monospace;
+      color: var(--maroon);
+      font-size: 13.5px;
+    }
+
+    .timeline-row .what strong {
+      display: block;
+      color: var(--green-dark);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .timeline-row .what span {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- SERVICES ---------- */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    @media (max-width:760px) {
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:520px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      background: var(--ivory);
+      padding: 34px 28px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .service-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--gold);
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      color: var(--green-dark);
+    }
+
+    .service-card p {
+      font-size: 13.8px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* ---------- CHAMBER / PRESCRIPTION PAD ---------- */
+    .pad-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .pad {
+      max-width: 720px;
+      width: 100%;
+      background: #FFFDF6;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px -20px rgba(11, 79, 60, 0.35);
+      position: relative;
+    }
+
+    .pad::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 14px;
+      background-image: radial-gradient(circle, var(--ivory) 5px, transparent 5.5px);
+      background-size: 20px 20px;
+      background-position: 0 -6px;
+    }
+
+    .pad-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 34px 34px 18px;
+      border-bottom: 2px solid var(--green);
+    }
+
+    .pad-head .rx {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      color: var(--maroon);
+      font-style: italic;
+    }
+
+    .pad-head .who {
+      text-align: right;
+    }
+
+    .pad-head .who strong {
+      display: block;
+      color: var(--green-dark);
+      font-family: 'Fraunces', serif;
+      font-size: 16px;
+    }
+
+    .pad-head .who span {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .pad-body {
+      padding: 26px 34px 34px;
+    }
+
+    .chamber-row {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 0.9fr;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px dashed var(--line);
+      align-items: center;
+    }
+
+    @media (max-width:600px) {
+      .chamber-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 18px 0;
+      }
+    }
+
+    .chamber-row:last-child {
+      border-bottom: none;
+    }
+
+    .chamber-row .place strong {
+      display: block;
+      font-family: 'Fraunces', serif;
+      font-size: 16.5px;
+      color: var(--green-dark);
+    }
+
+    .chamber-row .place span {
+      font-size: 12.8px;
+      color: var(--ink-soft);
+    }
+
+    .chamber-row .days {
+      font-size: 13px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .chamber-row .time {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--maroon);
+      text-align: right;
+    }
+
+    @media (max-width:600px) {
+      .chamber-row .time {
+        text-align: left;
+      }
+    }
+
+    .pad-foot {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pad-foot .stamp {
+      font-family: 'IBM Plex Mono', monospace;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+    }
+
+    /* ---------- REVIEWS ---------- */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width:860px) {
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .review-card {
+      background: var(--ivory);
+      border: 1px solid var(--line);
+      padding: 30px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .review-card .quote {
+      font-size: 15px;
+      color: var(--ink);
+      font-style: italic;
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+    }
+
+    .review-who {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .review-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 14px;
+      color: var(--green-dark);
+    }
+
+    .review-who strong {
+      display: block;
+      font-size: 13.5px;
+    }
+
+    .review-who span {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    @media (max-width:860px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-list {
+      list-style: none;
+      margin: 28px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .info-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .info-list .ic {
+      width: 34px;
+      height: 34px;
+      border: 1.5px solid var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--green-dark);
+    }
+
+    .info-list strong {
+      display: block;
+      font-size: 14.5px;
+      color: var(--green-dark);
+    }
+
+    .info-list span {
+      font-size: 13.8px;
+      color: var(--ink-soft);
+    }
+
+    .map-box {
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      background:
+        repeating-linear-gradient(45deg, rgba(11, 79, 60, 0.05) 0 10px, transparent 10px 20px);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      font-size: 13px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    form.appt {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 12.5px;
+      letter-spacing: 0.03em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      border: 1px solid var(--line);
+      background: #FFFDF6;
+      padding: 12px 14px;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 14.5px;
+      color: var(--ink);
+      border-radius: var(--radius);
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      outline: 2px solid var(--green);
+      outline-offset: 1px;
+      border-color: var(--green);
+    }
+
+    .row2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width:480px) {
+      .row2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .submit-btn {
+      margin-top: 6px;
+      align-self: flex-start;
+      background: var(--green);
+      color: var(--ivory);
+      border: 1px solid var(--green);
+      padding: 14px 30px;
+      font-size: 14.5px;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: var(--green-dark);
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--ink-soft);
+      margin-top: 4px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--green-dark);
+      color: rgba(251, 246, 236, 0.85);
+      padding: 56px 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(251, 246, 236, 0.15);
+    }
+
+    .footer-grid h3 {
+      color: var(--ivory);
+      font-size: 20px;
+    }
+
+    .footer-grid .bn {
+      font-size: 13px;
+      color: rgba(251, 246, 236, 0.6);
+      margin-top: 4px;
+    }
+
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    footer nav ul a {
+      text-decoration: none;
+      font-size: 13.5px;
+      color: rgba(251, 246, 236, 0.75);
+    }
+
+    footer nav ul a:hover {
+      color: var(--ivory);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: rgba(251, 246, 236, 0.55);
+    }
+
+    .emergency-strip {
+      background: var(--maroon);
+      color: var(--ivory);
+      text-align: center;
+      font-size: 13px;
+      padding: 10px 16px;
+    }
+
+    .emergency-strip strong {
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.02em;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="emergency-strip">For medical emergencies, call <strong>999</strong> or visit your nearest hospital emergency department directly.</div>
+  <div class="emergency-strip">For medical emergencies, call <strong>999</strong> or visit your nearest hospital
+    emergency department directly.</div>
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <div class="brand-mark">AC</div>
-      <div>
-        <div class="brand-name">Dr. Ayesha Chowdhury</div>
-        <div class="brand-sub">Consultant Physician</div>
-      </div>
-    </div>
-    <div class="nav-links-wrap">
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Care Areas</a></li>
-          <li><a href="#chamber">Chamber Hours</a></li>
-          <li><a href="#reviews">Patients Say</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#contact" class="nav-cta">Book Appointment</a>
-    </div>
-    <button class="menu-btn" aria-label="Menu">&#9776;</button>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">MBBS &middot; FCPS (Medicine) &middot; Dhaka</div>
-      <h1>Careful medicine,<br>close to home.</h1>
-      <div class="bn-name bn">ডা: আয়েশা চৌধুরী — কনসালট্যান্ট ফিজিশিয়ান</div>
-      <div class="credentials-line">MBBS (DMC) · FCPS (Medicine) · Dip. Diabetology · BMDC Reg. A-58214</div>
-      <p class="lede">Eighteen years treating diabetes, thyroid and heart conditions across Dhaka — with the kind of unhurried consultation that catches what a five-minute visit misses.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn-primary">Book an Appointment</a>
-        <a href="#chamber" class="btn-secondary">See Chamber Hours</a>
-      </div>
-      <div class="hero-stats">
-        <div><div class="num">18+</div><div class="label">Years in Practice</div></div>
-        <div><div class="num">30k+</div><div class="label">Patients Treated</div></div>
-        <div><div class="num">3</div><div class="label">Chambers in Dhaka</div></div>
-      </div>
-    </div>
-
-    <div class="seal-wrap">
-      <div class="seal">
-        <div class="seal-ring">
-          <svg viewBox="0 0 340 340">
-            <defs>
-              <path id="circlePath" d="M 170,170 m -148,0 a 148,148 0 1,1 296,0 a 148,148 0 1,1 -296,0" />
-            </defs>
-            <text>
-              <textPath href="#circlePath" startOffset="2%">
-                রোগীর সেবাই আমার ব্রত &nbsp;&#9670;&nbsp; ডা: আয়েশা চৌধুরী &nbsp;&#9670;&nbsp;
-              </textPath>
-            </text>
-          </svg>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-mark">AC</div>
+        <div>
+          <div class="brand-name">Dr. S M Rana Newaj</div>
+          <div class="brand-sub">Consultant Physician</div>
         </div>
-        <div class="seal-photo">
-          <svg class="placeholder-figure" viewBox="0 0 200 200" fill="none">
+      </div>
+      <div class="nav-links-wrap">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Care Areas</a></li>
+            <li><a href="#chamber">Chamber Hours</a></li>
+            <li><a href="#reviews">Patients Say</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="nav-cta">Book Appointment</a>
+      </div>
+      <button class="menu-btn" aria-label="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">MBBS &middot; FCPS (Medicine) &middot; Dhaka</div>
+        <h1>Careful medicine,<br>close to home.</h1>
+        <div class="bn-name bn">ডা: আয়েশা চৌধুরী — কনসালট্যান্ট ফিজিশিয়ান</div>
+        <div class="credentials-line">MBBS (DMC) · FCPS (Sugery) · BMDC Reg. A-XXXXX</div>
+        <p class="lede">Several years treating conditions across Dhaka — with the kind of unhurried consultation that
+          catches what a five-minute visit misses.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Book an Appointment</a>
+          <a href="#chamber" class="btn-secondary">See Chamber Hours</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="num">18+</div>
+            <div class="label">Years in Practice</div>
+          </div>
+          <div>
+            <div class="num">30k+</div>
+            <div class="label">Patients Treated</div>
+          </div>
+          <div>
+            <div class="num">3</div>
+            <div class="label">Chambers in Dhaka</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="seal-wrap">
+        <div class="seal">
+          <div class="seal-ring">
+            <svg viewBox="0 0 340 340">
+              <defs>
+                <path id="circlePath" d="M 170,170 m -148,0 a 148,148 0 1,1 296,0 a 148,148 0 1,1 -296,0" />
+              </defs>
+              <text>
+                <textPath href="#circlePath" startOffset="2%">
+                  রোগীর সেবাই আমার ব্রত &nbsp;&#9670;&nbsp; ডা: আয়েশা চৌধুরী &nbsp;&#9670;&nbsp;
+                </textPath>
+              </text>
+            </svg>
+          </div>
+          <div class="seal-photo">
+            <!-- <svg class="placeholder-figure" viewBox="0 0 200 200" fill="none">
             <circle cx="100" cy="72" r="38" stroke="currentColor" stroke-width="3"/>
             <path d="M30 190c0-45 31-78 70-78s70 33 70 78" stroke="currentColor" stroke-width="3"/>
-          </svg>
+          </svg> -->
+            <img src="../rananewaj/dr rana.jpeg" alt="Placeholder portrait of Dr.  — replace with a real photo"
+              loading="lazy">
+
+          </div>
+          <div class="seal-badge">EST.<br>2007</div>
         </div>
-        <div class="seal-badge">EST.<br>2007</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="about">
-  <div class="wrap about-grid">
-    <figure class="about-frame">
-      <svg class="placeholder-figure" viewBox="0 0 200 200" fill="none">
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <figure class="about-frame">
+        <!-- <svg class="placeholder-figure" viewBox="0 0 200 200" fill="none">
         <circle cx="100" cy="72" r="38" stroke="currentColor" stroke-width="3"/>
         <path d="M30 190c0-45 31-78 70-78s70 33 70 78" stroke="currentColor" stroke-width="3"/>
-      </svg>
-      <figcaption>Dr. Ayesha Chowdhury, at her Dhanmondi chamber</figcaption>
-    </figure>
-    <div class="about-body">
-      <div class="eyebrow">About</div>
-      <h2>Trained in Dhaka, shaped by two decades of listening first.</h2>
-      <p>Dr. Chowdhury completed her MBBS at Dhaka Medical College and her FCPS in Internal Medicine under the Bangladesh College of Physicians and Surgeons, followed by a fellowship in diabetology. She now divides her time between hospital rounds and chamber consultations across the city.</p>
-      <p>Her approach centres on a simple idea: most chronic conditions are managed well only when the patient understands the plan. Every consultation ends with a written-down explanation, not just a prescription.</p>
+      </svg> -->
+        <img
+          src="https://ui-avatars.com/api/?name=Ayesha+Chowdhury&background=C9D8CC&color=073C2D&size=600&bold=true&font-size=0.3"
+          alt="Placeholder portrait of Dr. Ayesha Chowdhury — replace with a real photo" loading="lazy">
 
-      <div class="timeline">
-        <div class="timeline-row">
-          <div class="yr">2005</div>
-          <div class="what"><strong>MBBS</strong><span>Dhaka Medical College &amp; Hospital</span></div>
-        </div>
-        <div class="timeline-row">
-          <div class="yr">2011</div>
-          <div class="what"><strong>FCPS (Medicine)</strong><span>Bangladesh College of Physicians &amp; Surgeons</span></div>
-        </div>
-        <div class="timeline-row">
+        <figcaption>Dr. S M Rana Newaj, at her Dhanmondi chamber</figcaption>
+      </figure>
+      <div class="about-body">
+        <div class="eyebrow">About</div>
+        <h2>Trained in Dhaka, shaped by two decades of listening first.</h2>
+        <p>Dr. Rana completed her MBBS at Popular Medical College and her FCPS in Internal Medicine under the Bangladesh
+          College of Physicians and Surgeons, followed by a fellowship in diabetology. She now divides her time between
+          hospital rounds and chamber consultations across the city.</p>
+        <p>Her approach centres on a simple idea: most chronic conditions are managed well only when the patient
+          understands the plan. Every consultation ends with a written-down explanation, not just a prescription.</p>
+
+        <div class="timeline">
+          <div class="timeline-row">
+            <div class="yr">2005</div>
+            <div class="what"><strong>MBBS</strong><span>Popular Medical College &amp; Hospital</span></div>
+          </div>
+          <div class="timeline-row">
+            <div class="yr">2011</div>
+            <div class="what"><strong>FCPS (Medicine)</strong><span>Bangladesh College of Physicians &amp;
+                Surgeons</span></div>
+          </div>
+          <!-- <div class="timeline-row">
           <div class="yr">2013</div>
           <div class="what"><strong>Fellowship, Diabetology</strong><span>BIRDEM General Hospital, Dhaka</span></div>
         </div>
         <div class="timeline-row">
           <div class="yr">2016–present</div>
           <div class="what"><strong>Consultant Physician</strong><span>Square Hospitals Ltd.</span></div>
+        </div> -->
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section-alt" id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Care Areas</div>
-      <h2>Where patients usually come to her</h2>
-      <p>General medicine, with particular focus on the conditions that need steady, long-term management rather than a single fix.</p>
-    </div>
-    <div class="service-grid">
-      <div class="service-card">
-        <div class="service-num">01</div>
-        <h3>Diabetes &amp; Endocrine Care</h3>
-        <p>Blood sugar management, insulin planning, and thyroid disorders, reviewed with regular lab tracking.</p>
+  <section class="section section-alt" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Care Areas</div>
+        <h2>Where patients usually come to her</h2>
+        <p>General medicine, with particular focus on the conditions that need steady, long-term management rather than
+          a single fix.</p>
       </div>
-      <div class="service-card">
-        <div class="service-num">02</div>
-        <h3>Hypertension &amp; Heart Health</h3>
-        <p>Blood pressure control and cardiac risk assessment for patients managing long-term heart conditions.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-num">03</div>
-        <h3>General Medicine</h3>
-        <p>Fevers, infections, and everyday illness — assessed carefully rather than rushed through.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-num">04</div>
-        <h3>Preventive Health Checkups</h3>
-        <p>Annual screening packages built around age, family history, and existing risk factors.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-num">05</div>
-        <h3>Post-Hospital Follow-up</h3>
-        <p>Recovery planning and medication review after a hospital stay or surgery elsewhere.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-num">06</div>
-        <h3>Second Opinions</h3>
-        <p>A careful second look at an existing diagnosis or treatment plan, with full report review.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="chamber">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Chamber Hours</div>
-      <h2>Where and when to find her</h2>
-      <p>Three chambers across Dhaka. Serial numbers are given at each hospital's help desk or by phone — walk-ins are seen after serial patients.</p>
-    </div>
-    <div class="pad-wrap">
-      <div class="pad">
-        <div class="pad-head">
-          <div class="rx">℞</div>
-          <div class="who">
-            <strong>Dr. Ayesha Chowdhury</strong>
-            <span>MBBS, FCPS (Medicine) &middot; BMDC A-58214</span>
-          </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <h3>Diabetes &amp; Endocrine Care</h3>
+          <p>Blood sugar management, insulin planning, and thyroid disorders, reviewed with regular lab tracking.</p>
         </div>
-        <div class="pad-body">
-          <div class="chamber-row">
-            <div class="place"><strong>Square Hospitals Ltd.</strong><span>18/F, Panthapath, Dhaka</span></div>
-            <div class="days">Sat &middot; Mon &middot; Wed</div>
-            <div class="time">6:00 – 9:00 PM</div>
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3>Hypertension &amp; Heart Health</h3>
+          <p>Blood pressure control and cardiac risk assessment for patients managing long-term heart conditions.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3>General Medicine</h3>
+          <p>Fevers, infections, and everyday illness — assessed carefully rather than rushed through.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3>Preventive Health Checkups</h3>
+          <p>Annual screening packages built around age, family history, and existing risk factors.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <h3>Post-Hospital Follow-up</h3>
+          <p>Recovery planning and medication review after a hospital stay or surgery elsewhere.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <h3>Second Opinions</h3>
+          <p>A careful second look at an existing diagnosis or treatment plan, with full report review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="chamber">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Chamber Hours</div>
+        <h2>Where and when to find her</h2>
+        <p>Three chambers across Dhaka. Serial numbers are given at each hospital's help desk or by phone — walk-ins are
+          seen after serial patients.</p>
+      </div>
+      <div class="pad-wrap">
+        <div class="pad">
+          <div class="pad-head">
+            <div class="rx">℞</div>
+            <div class="who">
+              <strong>Dr. Dr. S M Abu Newaz Rana </strong>
+              <span>MBBS, FCPS (Surgery) &middot; BMDC A-XXXX</span>
+            </div>
           </div>
-          <div class="chamber-row">
+          <div class="pad-body">
+            <div class="chamber-row">
+              <div class="place"><strong>Square Hospitals Ltd.</strong><span>18/F, Panthapath, Dhaka</span></div>
+              <div class="days">Sat &middot; Mon &middot; Wed</div>
+              <div class="time">6:00 – 9:00 PM</div>
+            </div>
+            <!-- <div class="chamber-row">
             <div class="place"><strong>Ibn Sina Hospital</strong><span>Road 15, Dhanmondi, Dhaka</span></div>
             <div class="days">Sun &middot; Tue &middot; Thu</div>
             <div class="time">5:00 – 8:00 PM</div>
@@ -548,158 +1186,164 @@
             <div class="place"><strong>Popular Diagnostic Centre</strong><span>Green Road, Dhaka</span></div>
             <div class="days">Friday</div>
             <div class="time">10:00 AM – 1:00 PM</div>
-          </div>
-          <div class="pad-foot">
-            <span>Serial: <strong>+880 1711-223344</strong></span>
-            <span class="stamp">BMDC REG. A-58214</span>
+          </div> -->
+            <div class="pad-foot">
+              <span>Serial: <strong>+880 1711-223344</strong></span>
+              <span class="stamp">BMDC REG. A-XXXX</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section-alt" id="reviews">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Patients Say</div>
-      <h2>Notes from the waiting room</h2>
-    </div>
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="quote">"She actually explained why my sugar levels were swinging instead of just changing the dose. First doctor who's done that in years."</div>
-        <div class="review-who">
-          <div class="review-avatar">RH</div>
-          <div><strong>Rezaul Haque</strong><span>Patient since 2019</span></div>
+  <section class="section section-alt" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Patients Say</div>
+        <h2>Notes from the waiting room</h2>
+      </div>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="quote">"She actually explained why my sugar levels were swinging instead of just changing the
+            dose. First doctor who's done that in years."</div>
+          <div class="review-who">
+            <div class="review-avatar">RH</div>
+            <div><strong>Rezaul Haque</strong><span>Patient since 2019</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="quote">"My mother's thyroid reports finally make sense to us. Appa waits happily even when the
+            chamber runs late."</div>
+          <div class="review-who">
+            <div class="review-avatar">SN</div>
+            <div><strong>Shirin Nahar</strong><span>Patient's daughter</span></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="quote">"Booked a second opinion after a confusing report from another hospital. She went through
+            every line with me."</div>
+          <div class="review-who">
+            <div class="review-avatar">TI</div>
+            <div><strong>Tanvir Islam</strong><span>Patient since 2022</span></div>
+          </div>
         </div>
       </div>
-      <div class="review-card">
-        <div class="quote">"My mother's thyroid reports finally make sense to us. Appa waits happily even when the chamber runs late."</div>
-        <div class="review-who">
-          <div class="review-avatar">SN</div>
-          <div><strong>Shirin Nahar</strong><span>Patient's daughter</span></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="quote">"Booked a second opinion after a confusing report from another hospital. She went through every line with me."</div>
-        <div class="review-who">
-          <div class="review-avatar">TI</div>
-          <div><strong>Tanvir Islam</strong><span>Patient since 2022</span></div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="contact">
-  <div class="wrap contact-grid">
-    <div>
-      <div class="eyebrow">Get in Touch</div>
-      <h2>Reach the chamber directly</h2>
-      <ul class="info-list">
-        <li>
-          <div class="ic">&#9742;</div>
-          <div><strong>Phone / Serial</strong><span>+880 1711-223344 (10 AM – 8 PM, Sat–Thu)</span></div>
-        </li>
-        <li>
-          <div class="ic">&#9993;</div>
-          <div><strong>Email</strong><span>chamber.dr.ayesha@example.com</span></div>
-        </li>
-        <li>
-          <div class="ic">&#8982;</div>
-          <div><strong>Primary Chamber</strong><span>Square Hospitals Ltd., 18/F Panthapath, Dhaka 1205</span></div>
-        </li>
-      </ul>
-      <div class="map-box">Map preview placeholder<br>(embed Google Maps here for the live site)</div>
-    </div>
-
-    <div>
-      <div class="eyebrow">Request an Appointment</div>
-      <h2 style="margin-bottom:20px;">Tell us when works for you</h2>
-      <form class="appt">
-        <div class="row2">
-          <div class="field">
-            <label for="name">Full name</label>
-            <input id="name" type="text" placeholder="Your name">
-          </div>
-          <div class="field">
-            <label for="phone">Phone number</label>
-            <input id="phone" type="tel" placeholder="01XXX-XXXXXX">
-          </div>
-        </div>
-        <div class="field">
-          <label for="chamber-select">Preferred chamber</label>
-          <select id="chamber-select">
-            <option>Square Hospitals — Panthapath</option>
-            <option>Ibn Sina Hospital — Dhanmondi</option>
-            <option>Popular Diagnostic — Green Road</option>
-          </select>
-        </div>
-        <div class="row2">
-          <div class="field">
-            <label for="date">Preferred date</label>
-            <input id="date" type="date">
-          </div>
-          <div class="field">
-            <label for="time">Preferred time</label>
-            <input id="time" type="time">
-          </div>
-        </div>
-        <div class="field">
-          <label for="msg">Reason for visit (optional)</label>
-          <textarea id="msg" rows="3" placeholder="Briefly describe your concern"></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Request Appointment</button>
-        <div class="form-note">This is a demo form — no data is submitted. On the live site this connects to chamber booking &amp; SMS confirmation.</div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
       <div>
-        <h3>Dr. Ayesha Chowdhury</h3>
-        <div class="bn bn-text">কনসালট্যান্ট ফিজিশিয়ান, ঢাকা</div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Care Areas</a></li>
-          <li><a href="#chamber">Chamber Hours</a></li>
-          <li><a href="#reviews">Patients Say</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <div class="eyebrow">Get in Touch</div>
+        <h2>Reach the chamber directly</h2>
+        <ul class="info-list">
+          <li>
+            <div class="ic">&#9742;</div>
+            <div><strong>Phone / Serial</strong><span>+880 1711-223344 (10 AM – 8 PM, Sat–Thu)</span></div>
+          </li>
+          <li>
+            <div class="ic">&#9993;</div>
+            <div><strong>Email</strong><span>email@example.com</span></div>
+          </li>
+          <li>
+            <div class="ic">&#8982;</div>
+            <div><strong>Primary Chamber</strong><span>Noble Care Hospital and Diagnostic Ltd, 246/1C, 15 W Agargaon,
+                Dhaka 1207</span></div>
+          </li>
         </ul>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Dr. Ayesha Chowdhury. Demo design — content is illustrative.</span>
-      <span>BMDC Reg. A-58214</span>
-    </div>
-  </div>
-</footer>
+        <div class="map-box">Map preview placeholder<br>(embed Google Maps here for the live site)</div>
+      </div>
 
-<script>
-  const menuBtn = document.querySelector('.menu-btn');
-  const linksWrap = document.querySelector('.nav-links-wrap');
-  menuBtn?.addEventListener('click', () => {
-    const isOpen = linksWrap.style.display === 'flex';
-    linksWrap.style.display = isOpen ? 'none' : 'flex';
-    linksWrap.style.flexDirection = 'column';
-    linksWrap.style.position = 'absolute';
-    linksWrap.style.top = '64px';
-    linksWrap.style.right = '20px';
-    linksWrap.style.background = 'var(--ivory)';
-    linksWrap.style.border = '1px solid var(--line)';
-    linksWrap.style.padding = '20px';
-    linksWrap.style.gap = '18px';
-  });
-  document.querySelector('form.appt')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Demo only — this form is not yet connected. On the live site this will send a confirmation SMS/email.');
-  });
-</script>
+      <div>
+        <div class="eyebrow">Request an Appointment</div>
+        <h2 style="margin-bottom:20px;">Tell us when works for you</h2>
+        <form class="appt">
+          <div class="row2">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" type="text" placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" placeholder="01XXX-XXXXXX">
+            </div>
+          </div>
+          <div class="field">
+            <label for="chamber-select">Preferred chamber</label>
+            <select id="chamber-select">
+              <option>Noble Care Hospital</option>
+              <!-- <option>Ibn Sina Hospital — Dhanmondi</option> -->
+              <!-- <option>Popular Diagnostic — Green Road</option> -->
+            </select>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input id="date" type="date">
+            </div>
+            <div class="field">
+              <label for="time">Preferred time</label>
+              <input id="time" type="time">
+            </div>
+          </div>
+          <div class="field">
+            <label for="msg">Reason for visit (optional)</label>
+            <textarea id="msg" rows="3" placeholder="Briefly describe your concern"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Request Appointment</button>
+          <div class="form-note">This is a demo form — no data is submitted. On the live site this connects to chamber
+            booking &amp; SMS confirmation.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>Dr. Dr. S M Abu Newaz Rana</h3>
+          <div class="bn bn-text">কনসালট্যান্ট ফিজিশিয়ান, ঢাকা</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Care Areas</a></li>
+            <li><a href="#chamber">Chamber Hours</a></li>
+            <li><a href="#reviews">Patients Say</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dr. Dr. S M Abu Newaz Rana. Demo design — content is illustrative.</span>
+        <span>BMDC Reg. A-58214</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const linksWrap = document.querySelector('.nav-links-wrap');
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = linksWrap.style.display === 'flex';
+      linksWrap.style.display = isOpen ? 'none' : 'flex';
+      linksWrap.style.flexDirection = 'column';
+      linksWrap.style.position = 'absolute';
+      linksWrap.style.top = '64px';
+      linksWrap.style.right = '20px';
+      linksWrap.style.background = 'var(--ivory)';
+      linksWrap.style.border = '1px solid var(--line)';
+      linksWrap.style.padding = '20px';
+      linksWrap.style.gap = '18px';
+    });
+    document.querySelector('form.appt')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Demo only — this form is not yet connected. On the live site this will send a confirmation SMS/email.');
+    });
+  </script>
 
 </body>
+
 </html>

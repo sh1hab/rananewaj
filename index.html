@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="https://sh1hab.github.io/favicon.ico">
   <title>Dr. S M Abu Newaz Rana — Consultant Physician &amp; </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -835,6 +836,40 @@
       color: var(--ink-soft);
     }
 
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green-dark);
+      background: var(--ivory);
+    }
+
+    .contact-link:hover {
+      background: rgba(11, 79, 60, 0.06);
+    }
+
+    .contact-link.whatsapp {
+      color: #128C7E;
+      border-color: rgba(18, 140, 126, 0.24);
+    }
+
+    .contact-link.whatsapp:hover {
+      background: rgba(18, 140, 126, 0.08);
+    }
+
     .map-box {
       margin-top: 28px;
       border: 1px solid var(--line);
@@ -1205,7 +1240,13 @@
             <div class="time">10:00 AM – 1:00 PM</div>
           </div> -->
             <div class="pad-foot">
-              <span>Serial: <strong>+880 1629-921186</strong></span>
+              <span class="contact-actions">
+                <span>Serial:</span>
+                <strong>+880 1629-921186</strong>
+                <a class="contact-link" href="tel:+8801629921186">Call</a>
+                <a class="contact-link whatsapp" href="https://wa.me/8801629921186" target="_blank"
+                  rel="noopener noreferrer">WhatsApp</a>
+              </span>
               <span class="stamp">BMDC REG. A-XXXX</span>
             </div>
           </div>
@@ -1257,7 +1298,15 @@
         <ul class="info-list">
           <li>
             <div class="ic">&#9742;</div>
-            <div><strong>Phone / Serial</strong><span>+880 1629-921186 (10 AM – 8 PM, Sat–Thu)</span></div>
+            <div>
+              <strong>Phone / Serial</strong>
+              <span>+880 1629-921186 (10 AM – 8 PM, Sat–Thu)</span>
+              <div class="contact-actions">
+                <a class="contact-link" href="tel:+8801629921186">Call</a>
+                <a class="contact-link whatsapp" href="https://wa.me/8801629921186" target="_blank"
+                  rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
           </li>
           <li>
             <div class="ic">&#9993;</div>
@@ -1327,6 +1376,11 @@
         <div>
           <h3>Dr. S M Abu Newaz Rana</h3>
           <div class="bn bn-text">কনসালট্যান্ট ফিজিশিয়ান, ঢাকা</div>
+          <div class="contact-actions" style="margin-top:10px;">
+            <a class="contact-link" href="tel:+8801629921186">Call</a>
+            <a class="contact-link whatsapp" href="https://wa.me/8801629921186" target="_blank"
+              rel="noopener noreferrer">WhatsApp</a>
+          </div>
         </div>
         <nav>
           <ul>

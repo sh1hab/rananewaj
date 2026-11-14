@@ -1027,6 +1027,41 @@
       font-family: 'IBM Plex Mono', monospace;
       letter-spacing: 0.02em;
     }
+
+    /* ---------- LANGUAGE TOGGLE ---------- */
+    .lang-toggle {
+      background: transparent;
+      border: 1px solid var(--green);
+      color: var(--green-dark);
+      padding: 9px 14px;
+      font-size: 13.5px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-family: 'IBM Plex Sans Bengali', 'IBM Plex Sans', sans-serif;
+    }
+
+    .lang-toggle:hover {
+      background: rgba(11, 79, 60, 0.06);
+    }
+
+    /* Bangla typography: Fraunces / Plex Mono have no Bengali glyphs */
+    html[lang="bn"] body {
+      line-height: 1.75;
+    }
+
+    html[lang="bn"] body,
+    html[lang="bn"] :is(h1, h2, h3, .brand-name, .quote, .num, .place strong, .who strong, .time, .yr, .credentials-line, .stamp, .service-num) {
+      font-family: 'IBM Plex Sans Bengali', 'IBM Plex Sans', sans-serif;
+    }
+
+    html[lang="bn"] * {
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+    }
+
+    html[lang="bn"] .review-card .quote {
+      font-style: normal;
+    }
   </style>
 </head>
 
@@ -1038,7 +1073,7 @@
   <header>
     <div class="nav">
       <div class="brand">
-        <div class="brand-mark">-</div>
+        <div class="brand-mark">AC</div>
         <div>
           <div class="brand-name">Dr. S M Abu Newaz Rana</div>
           <div class="brand-sub">General, laparoscopic, breast and colorectal surgeon</div>
@@ -1055,6 +1090,7 @@
           </ul>
         </nav>
         <a href="#contact" class="nav-cta">Book Appointment</a>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">বাংলা</button>
       </div>
       <button class="menu-btn" aria-label="Menu">&#9776;</button>
     </div>
@@ -1064,8 +1100,9 @@
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">MBBS &middot; FCPS (Surgery) &middot; Dhaka</div>
-        <h1>Trusted  hands, Reliable care</h1>
-        <div class="bn-name bn">ডঃ এস এম আবু নেওয়াজ রানা — জেনারেল , ল্যাপারোস্কোপিক, ব্রেস্ট  ও কোলোরেক্টাল সার্জন</div>
+        <h1>Trusted hands, Reliable care</h1>
+        <div class="bn-name bn">ডঃ এস এম আবু নেওয়াজ রানা — জেনারেল , ল্যাপারোস্কোপিক, ব্রেস্ট ও কোলোরেক্টাল সার্জন
+        </div>
         <div class="credentials-line">MBBS (DU) · FCPS (Surgery) · BMDC Reg. A-90106</div>
         <p class="lede">Several years treating conditions across Dhaka — with the kind of unhurried consultation that
           catches what a five-minute visit misses.</p>
@@ -1108,8 +1145,7 @@
             <circle cx="100" cy="72" r="38" stroke="currentColor" stroke-width="3"/>
             <path d="M30 190c0-45 31-78 70-78s70 33 70 78" stroke="currentColor" stroke-width="3"/>
           </svg> -->
-            <img src="../dr rana.jpeg" alt="Placeholder portrait of Dr.  — replace with a real photo"
-              loading="lazy">
+            <img src="../dr rana.jpeg" alt="Placeholder portrait of Dr.  — replace with a real photo" loading="lazy">
 
           </div>
           <div class="seal-badge">EST.<br>2007</div>
@@ -1125,17 +1161,17 @@
         <circle cx="100" cy="72" r="38" stroke="currentColor" stroke-width="3"/>
         <path d="M30 190c0-45 31-78 70-78s70 33 70 78" stroke="currentColor" stroke-width="3"/>
       </svg> -->
-        <img src="../dr rana.jpeg"
-          alt="Placeholder portrait of Dr.  — replace with a real photo" loading="lazy">
+        <img src="../dr rana.jpeg" alt="Placeholder portrait of Dr.  — replace with a real photo" loading="lazy">
 
         <figcaption>Dr. S M Abu Newaz Rana</figcaption>
       </figure>
-      
+
       <div class="about-body">
         <div class="eyebrow">About</div>
         <h2>Trained in Dhaka, shaped by decade of listening first.</h2>
-        <p>Dr. Newaz Rana completed his MBBS at Popular Medical College and his FCPS in General surgery  under the Bangladesh
-          College of Physicians and Surgeons, followed by advanced diploma in medical ultrasonography . 
+        <p>Dr. Newaz Rana completed his MBBS at Popular Medical College and his FCPS in General surgery under the
+          Bangladesh
+          College of Physicians and Surgeons, followed by advanced diploma in medical ultrasonography .
           He now divides his time between hospital rounds and chamber consultations across the city.</p>
         <p>his approach centres on a simple idea: most chronic conditions are managed well only when the patient
           understands the plan. Every consultation ends with a written-down explanation, not just a prescription.</p>
@@ -1147,7 +1183,7 @@
           </div>
           <div class="timeline-row">
             <div class="yr">2025</div>
-            <div class="what"><strong>FCPS (surgery)</strong><span>Bangladesh College of Physicians &amp;
+            <div class="what"><strong>FCPS (Medicine)</strong><span>Bangladesh College of Physicians &amp;
                 Surgeons</span></div>
           </div>
           <!-- <div class="timeline-row">
@@ -1175,22 +1211,26 @@
         <div class="service-card">
           <div class="service-num">01</div>
           <h3>Circumcision &amp; Minor Procedures</h3>
-          <p>Safe, sterile circumcision for infants, children, and adults using modern techniques with minimal discomfort.</p>
+          <p>Safe, sterile circumcision for infants, children, and adults using modern techniques with minimal
+            discomfort.</p>
         </div>
         <div class="service-card">
           <div class="service-num">02</div>
           <h3>General &amp; Laparoscopic Surgery</h3>
-          <p>Minimally invasive keyhole surgeries for hernias, appendicitis, gallbladder stones, and soft tissue lumps with faster recovery times.</p>
+          <p>Minimally invasive keyhole surgeries for hernias, appendicitis, gallbladder stones, and soft tissue lumps
+            with faster recovery times.</p>
         </div>
         <div class="service-card">
           <div class="service-num">03</div>
           <h3>Breast &amp; Colorectal Care</h3>
-          <p>Specialized diagnosis and surgical treatment for breast lumps, piles (hemorrhoids), fissures, fistulas, and other colorectal conditions.</p>
+          <p>Specialized diagnosis and surgical treatment for breast lumps, piles (hemorrhoids), fissures, fistulas, and
+            other colorectal conditions.</p>
         </div>
         <div class="service-card">
           <div class="service-num">04</div>
           <h3>Online Surgical Consultation </h3>
-          <p>Thorough health checkups and fitness assessments before surgery, tailored to age, medical history, and risk factors.</p>
+          <p>Thorough health checkups and fitness assessments before surgery, tailored to age, medical history, and risk
+            factors.</p>
         </div>
         <div class="service-card">
           <div class="service-num">05</div>
@@ -1200,7 +1240,8 @@
         <div class="service-card">
           <div class="service-num">06</div>
           <h3>Surgical Second Opinions</h3>
-          <p>A careful second look at an existing surgical recommendation or diagnosis, with a full review of reports and scans.</p>
+          <p>A careful second look at an existing surgical recommendation or diagnosis, with a full review of reports
+            and scans.</p>
         </div>
       </div>
 
@@ -1232,12 +1273,13 @@
               <div class="time">6:30 – 9:30 PM</div>
             </div>
             <div class="chamber-row">
-              <div class="place"><strong>City general hospital.</strong><span> Nikunja 2 , khilkhet( beside le meredian hotel),
+              <div class="place"><strong>City general hospital.</strong><span> Nikunja 2 , khilkhet( beside le meredian
+                  hotel),
                   Dhaka 1207</span></div>
               <div class="days">Sat &middot; Mon &middot; Wed</div>
               <div class="time">6:30 – 8:30 PM</div>
             </div>
-            
+
             <!-- <div class="chamber-row">
             <div class="place"><strong>Ibn Sina Hospital</strong><span>Road 15, Dhanmondi, Dhaka</span></div>
             <div class="days">Sun &middot; Tue &middot; Thu</div>
@@ -1248,7 +1290,7 @@
             <div class="days">Friday</div>
             <div class="time">10:00 AM – 1:00 PM</div>
           </div> -->
-            
+
             <div class="pad-foot">
               <span class="contact-actions">
                 <span>Serial:</span>
@@ -1289,7 +1331,7 @@
           </div>
         </div>
         <div class="review-card">
-          <div class="quote">"Booked a second opinion after a confusing report from another hospital. She went through
+          <div class="quote">"Booked a second opinion after a confusing report from another hospital. He went through
             every line with me."</div>
           <div class="review-who">
             <div class="review-avatar">TI</div>
@@ -1343,19 +1385,19 @@
           <div class="row2">
             <div class="field">
               <label for="name">Full name</label>
-              <input id="name" type="text" placeholder="Your name">
+              <input id="name" type="text" placeholder="Your name" required>
             </div>
             <div class="field">
               <label for="phone">Phone number</label>
-              <input id="phone" type="tel" placeholder="01XXX-XXXXXX">
+              <input id="phone" type="tel" placeholder="01XXX-XXXXXX" required>
             </div>
           </div>
           <div class="field">
             <label for="chamber-select">Preferred chamber</label>
             <select id="chamber-select">
               <option>Noble Care Hospital and Diagnostic Center</option>
-              <option>City  general Hospital, Khilkhet</option>
-              
+              <option>City general Hospital, Khilkhet</option>
+
               <!-- <option>Ibn Sina Hospital — Dhanmondi</option> -->
               <!-- <option>Popular Diagnostic — Green Road</option> -->
             </select>
@@ -1375,8 +1417,8 @@
             <textarea id="msg" rows="3" placeholder="Briefly describe your concern"></textarea>
           </div>
           <button type="submit" class="submit-btn">Request Appointment</button>
-          <div class="form-note">This is a demo form — no data is submitted. On the live site this connects to chamber
-            booking &amp; SMS confirmation.</div>
+          <div class="form-note">Clicking the button opens WhatsApp with your request pre-filled. Please press Send to
+            confirm.</div>
         </form>
       </div>
     </div>
@@ -1412,33 +1454,52 @@
   </footer>
 
   <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const linksWrap = document.querySelector('.nav-links-wrap');
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = linksWrap.style.display === 'flex';
+      linksWrap.style.display = isOpen ? 'none' : 'flex';
+      linksWrap.style.flexDirection = 'column';
+      linksWrap.style.position = 'absolute';
+      linksWrap.style.top = '64px';
+      linksWrap.style.right = '20px';
+      linksWrap.style.background = 'var(--ivory)';
+      linksWrap.style.border = '1px solid var(--line)';
+      linksWrap.style.padding = '20px';
+      linksWrap.style.gap = '18px';
+    });
+
+    /* ---------- WhatsApp appointment request ---------- */
     const DOCTOR_WHATSAPP = '8801629921186'; // country code + number, no "+" or dashes
 
-document.querySelector('form.appt')?.addEventListener('submit', (e) => {
-  e.preventDefault();
+    // Capture the English chamber names now, so the message stays English even when the page is in Bangla
+    const chamberSelect = document.getElementById('chamber-select');
+    const chamberNamesEN = [...chamberSelect.options].map(o => o.text.replace(/\s+/g, ' ').trim());
 
-  const name    = document.getElementById('name').value.trim();
-  const phone   = document.getElementById('phone').value.trim();
-  const chamber = document.getElementById('chamber-select').selectedOptions[0].text;
-  const date    = document.getElementById('date').value;   // yyyy-mm-dd
-  const time    = document.getElementById('time').value;   // HH:MM (24h)
-  const reason  = document.getElementById('msg').value.trim();
+    document.querySelector('form.appt')?.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-  // Format date and time nicely
-  const prettyDate = date
-    ? new Date(date + 'T00:00:00').toLocaleDateString('en-GB', {
-        weekday: 'short', day: 'numeric', month: 'short', year: 'numeric'
-      })
-    : 'Not specified';
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const chamber = chamberNamesEN[chamberSelect.selectedIndex];
+      const date = document.getElementById('date').value;   // yyyy-mm-dd
+      const time = document.getElementById('time').value;   // HH:MM (24h)
+      const reason = document.getElementById('msg').value.trim();
 
-  let prettyTime = 'Not specified';
-  if (time) {
-    const [h, m] = time.split(':').map(Number);
-    prettyTime = `${h % 12 || 12}:${String(m).padStart(2, '0')} ${h >= 12 ? 'PM' : 'AM'}`;
-  }
+      const prettyDate = date
+        ? new Date(date + 'T00:00:00').toLocaleDateString('en-GB', {
+          weekday: 'short', day: 'numeric', month: 'short', year: 'numeric'
+        })
+        : 'Not specified';
 
-  const message =
-`Assalamu Alaikum, I would like to request an appointment.
+      let prettyTime = 'Not specified';
+      if (time) {
+        const [h, m] = time.split(':').map(Number);
+        prettyTime = `${h % 12 || 12}:${String(m).padStart(2, '0')} ${h >= 12 ? 'PM' : 'AM'}`;
+      }
+
+      const message =
+        `Assalamu Alaikum, I would like to request an appointment.
 
 *Name:* ${name}
 *Phone:* ${phone}
@@ -1447,9 +1508,160 @@ document.querySelector('form.appt')?.addEventListener('submit', (e) => {
 *Preferred time:* ${prettyTime}
 *Reason:* ${reason || 'Not specified'}`;
 
-  const url = `https://wa.me/${DOCTOR_WHATSAPP}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank', 'noopener');
-});
+      const url = `https://wa.me/${DOCTOR_WHATSAPP}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank', 'noopener');
+    });
+
+    /* ---------- Bangla / English toggle ---------- */
+    const BN = {
+      // emergency strip
+      "For medical emergencies, call": "জরুরি চিকিৎসার প্রয়োজনে",
+      "999": "৯৯৯",
+      "or visit your nearest hospital emergency department directly.": "নম্বরে কল করুন অথবা সরাসরি নিকটস্থ হাসপাতালের ইমার্জেন্সি বিভাগে যান।",
+
+      // header / nav / footer
+      "Dr. S M Abu Newaz Rana": "ডা. এস এম আবু নেওয়াজ রানা",
+      "General, laparoscopic, breast and colorectal surgeon": "জেনারেল, ল্যাপারোস্কোপিক, ব্রেস্ট ও কোলোরেক্টাল সার্জন",
+      "About": "পরিচিতি",
+      "Care Areas": "চিকিৎসা সেবা",
+      "Chamber Hours": "চেম্বারের সময়",
+      "Patients Say": "রোগীদের মতামত",
+      "Contact": "যোগাযোগ",
+      "Book Appointment": "অ্যাপয়েন্টমেন্ট নিন",
+
+      // hero
+      "MBBS · FCPS (Surgery) · Dhaka": "এমবিবিএস · এফসিপিএস (সার্জারি) · ঢাকা",
+      "Trusted hands, Reliable care": "নির্ভরযোগ্য হাত, আস্থার সেবা",
+      "MBBS (DU) · FCPS (Surgery) · BMDC Reg. A-90106": "এমবিবিএস (ডিইউ) · এফসিপিএস (সার্জারি) · বিএমডিসি রেজি. এ-৯০১০৬",
+      "Several years treating conditions across Dhaka — with the kind of unhurried consultation that catches what a five-minute visit misses.": "ঢাকায় বহু বছর ধরে নানা রোগের চিকিৎসা দিচ্ছেন — এমন তাড়াহুড়োহীন পরামর্শের মাধ্যমে, যা পাঁচ মিনিটের দেখায় ধরা পড়ে না এমন বিষয়ও ধরতে সাহায্য করে।",
+      "Book an Appointment": "অ্যাপয়েন্টমেন্ট নিন",
+      "See Chamber Hours": "চেম্বারের সময় দেখুন",
+      "10+": "১০+", "Years in Practice": "বছরের অভিজ্ঞতা",
+      "10k+": "১০ হাজার+", "Patients Treated": "রোগী চিকিৎসা",
+      "2": "২", "Chambers in Dhaka": "ঢাকায় চেম্বার",
+      "EST.": "প্রতিষ্ঠা", "2007": "২০০৭",
+
+      // about
+      "Trained in Dhaka, shaped by decade of listening first.": "ঢাকায় প্রশিক্ষিত, এক দশকের মনোযোগ দিয়ে শোনার অভিজ্ঞতায় গড়া।",
+      "Dr. Newaz Rana completed his MBBS at Popular Medical College and his FCPS in General surgery under the Bangladesh College of Physicians and Surgeons, followed by advanced diploma in medical ultrasonography . He now divides his time between hospital rounds and chamber consultations across the city.": "ডা. নেওয়াজ রানা পপুলার মেডিকেল কলেজ থেকে এমবিবিএস এবং বাংলাদেশ কলেজ অব ফিজিশিয়ান্স অ্যান্ড সার্জনস থেকে জেনারেল সার্জারিতে এফসিপিএস সম্পন্ন করেছেন। এরপর মেডিকেল আল্ট্রাসনোগ্রাফিতে অ্যাডভান্সড ডিপ্লোমা করেছেন। বর্তমানে তিনি হাসপাতালের রাউন্ড এবং শহরজুড়ে চেম্বারে রোগী দেখার মধ্যে সময় ভাগ করে নেন।",
+      "his approach centres on a simple idea: most chronic conditions are managed well only when the patient understands the plan. Every consultation ends with a written-down explanation, not just a prescription.": "তাঁর চিকিৎসাপদ্ধতির মূল কথা সহজ: দীর্ঘস্থায়ী রোগ তখনই ভালোভাবে নিয়ন্ত্রণে থাকে, যখন রোগী চিকিৎসার পরিকল্পনাটি বোঝেন। তাই প্রতিটি পরামর্শ শেষ হয় লিখিত ব্যাখ্যা দিয়ে, শুধু প্রেসক্রিপশন দিয়ে নয়।",
+      "2017": "২০১৭", "2025": "২০২৫",
+      "MBBS": "এমবিবিএস",
+      "Popular Medical College & Hospital": "পপুলার মেডিকেল কলেজ ও হাসপাতাল",
+      "FCPS (Surgery)": "এফসিপিএস (সার্জারি)",
+      "FCPS (Medicine)": "এফসিপিএস (মেডিসিন)",
+      "Bangladesh College of Physicians & Surgeons": "বাংলাদেশ কলেজ অব ফিজিশিয়ান্স অ্যান্ড সার্জনস",
+
+      // services
+      "Where patients usually come to him": "রোগীরা সাধারণত যে সমস্যায় আসেন",
+      "General , with particular focus on the conditions that need steady, long-term management rather than a single fix.": "সাধারণ সার্জারির পাশাপাশি এমন সমস্যায় বিশেষ মনোযোগ, যেগুলোতে এককালীন সমাধানের চেয়ে ধারাবাহিক, দীর্ঘমেয়াদি ব্যবস্থাপনা দরকার।",
+      "01": "০১", "02": "০২", "03": "০৩", "04": "০৪", "05": "০৫", "06": "০৬",
+      "Circumcision & Minor Procedures": "খৎনা ও ছোটখাটো অস্ত্রোপচার",
+      "Safe, sterile circumcision for infants, children, and adults using modern techniques with minimal discomfort.": "আধুনিক পদ্ধতিতে শিশু, কিশোর ও প্রাপ্তবয়স্কদের জন্য নিরাপদ ও জীবাণুমুক্ত পরিবেশে খৎনা, ন্যূনতম অস্বস্তিতে।",
+      "General & Laparoscopic Surgery": "জেনারেল ও ল্যাপারোস্কোপিক সার্জারি",
+      "Minimally invasive keyhole surgeries for hernias, appendicitis, gallbladder stones, and soft tissue lumps with faster recovery times.": "হার্নিয়া, অ্যাপেন্ডিসাইটিস, পিত্তথলির পাথর ও নরম টিস্যুর পিণ্ডের জন্য কিহোল সার্জারি, দ্রুত সুস্থতার সুযোগসহ।",
+      "Breast & Colorectal Care": "ব্রেস্ট ও কোলোরেক্টাল সেবা",
+      "Specialized diagnosis and surgical treatment for breast lumps, piles (hemorrhoids), fissures, fistulas, and other colorectal conditions.": "ব্রেস্টের পিণ্ড, পাইলস (অর্শ), ফিসার, ফিস্টুলা ও অন্যান্য কোলোরেক্টাল সমস্যার বিশেষায়িত রোগনির্ণয় ও অস্ত্রোপচার।",
+      "Online Surgical Consultation": "অনলাইন সার্জিক্যাল পরামর্শ",
+      "Thorough health checkups and fitness assessments before surgery, tailored to age, medical history, and risk factors.": "অস্ত্রোপচারের আগে বয়স, চিকিৎসা ইতিহাস ও ঝুঁকি অনুযায়ী পূর্ণাঙ্গ স্বাস্থ্য পরীক্ষা ও ফিটনেস মূল্যায়ন।",
+      "Post-Operative Care & Wound Management": "অস্ত্রোপচার-পরবর্তী সেবা ও ক্ষত ব্যবস্থাপনা",
+      "Follow-up recovery planning, dressing changes, and pain management after a procedure here or elsewhere.": "এখানে বা অন্য কোথাও অস্ত্রোপচারের পর সুস্থতার পরিকল্পনা, ড্রেসিং পরিবর্তন ও ব্যথা নিয়ন্ত্রণ।",
+      "Surgical Second Opinions": "সার্জারি বিষয়ে দ্বিতীয় মতামত",
+      "A careful second look at an existing surgical recommendation or diagnosis, with a full review of reports and scans.": "বিদ্যমান সার্জিক্যাল পরামর্শ বা রোগনির্ণয়ের ওপর রিপোর্ট ও স্ক্যান খতিয়ে দেখে যত্নসহকারে দ্বিতীয় মতামত।",
+
+      // chamber
+      "Where and when to find him": "কোথায় ও কখন পাবেন",
+      "Two chambers across Dhaka. Serial numbers are given at each hospital's help desk or by phone — walk-ins are seen after serial patients.": "ঢাকায় দুটি চেম্বার। সিরিয়াল প্রতিটি হাসপাতালের হেল্প ডেস্ক বা ফোনে দেওয়া হয় — সিরিয়ালধারী রোগীদের পরে সরাসরি আসা রোগীদের দেখা হয়।",
+      "MBBS, FCPS (Surgery) · BMDC A-90106": "এমবিবিএস, এফসিপিএস (সার্জারি) · বিএমডিসি এ-৯০১০৬",
+      "Noble Care Hospital and Diagnostic Ltd.": "নোবেল কেয়ার হাসপাতাল অ্যান্ড ডায়াগনস্টিক লিঃ",
+      "246/1C, 15 W Agargaon, Dhaka 1207": "২৪৬/১সি, ১৫ ডব্লিউ আগারগাঁও, ঢাকা ১২০৭",
+      "Sun · Tues · Thurs": "রবি · মঙ্গল · বৃহস্পতি",
+      "6:30 – 9:30 PM": "সন্ধ্যা ৬:৩০ – রাত ৯:৩০",
+      "City general hospital.": "সিটি জেনারেল হাসপাতাল",
+      "Nikunja 2 , khilkhet( beside le meredian hotel), Dhaka 1207": "নিকুঞ্জ ২, খিলক্ষেত (লে মেরিডিয়ান হোটেলের পাশে), ঢাকা ১২০৭",
+      "Sat · Mon · Wed": "শনি · সোম · বুধ",
+      "6:30 – 8:30 PM": "সন্ধ্যা ৬:৩০ – রাত ৮:৩০",
+      "Serial:": "সিরিয়াল:",
+      "Call": "কল করুন",
+      "BMDC REG. A-90106": "বিএমডিসি রেজি. এ-৯০১০৬",
+
+      // reviews (replace with real ones, then add their translations)
+      "Notes from the waiting room": "অপেক্ষাকক্ষ থেকে কিছু কথা",
+
+      // contact + form
+      "Get in Touch": "যোগাযোগ করুন",
+      "Reach the chamber directly": "সরাসরি চেম্বারে যোগাযোগ করুন",
+      "Phone / Serial": "ফোন / সিরিয়াল",
+      "+880 1629-921186 (10 AM – 8 PM, Sat–Thu)": "+880 1629-921186 (সকাল ১০টা – রাত ৮টা, শনি–বৃহস্পতি)",
+      "Email": "ইমেইল",
+      "Primary Chamber": "প্রধান চেম্বার",
+      "Noble Care Hospital and Diagnostic Ltd, 246/1C, 15 W Agargaon, Dhaka 1207": "নোবেল কেয়ার হাসপাতাল অ্যান্ড ডায়াগনস্টিক লিঃ, ২৪৬/১সি, ১৫ ডব্লিউ আগারগাঁও, ঢাকা ১২০৭",
+      "Request an Appointment": "অ্যাপয়েন্টমেন্টের অনুরোধ",
+      "Tell us when works for you": "আপনার সুবিধাজনক সময় জানান",
+      "Full name": "পুরো নাম",
+      "Phone number": "ফোন নম্বর",
+      "Preferred chamber": "পছন্দের চেম্বার",
+      "Noble Care Hospital and Diagnostic Center": "নোবেল কেয়ার হাসপাতাল অ্যান্ড ডায়াগনস্টিক সেন্টার",
+      "City general Hospital, Khilkhet": "সিটি জেনারেল হাসপাতাল, খিলক্ষেত",
+      "Preferred date": "পছন্দের তারিখ",
+      "Preferred time": "পছন্দের সময়",
+      "Reason for visit (optional)": "আসার কারণ (ঐচ্ছিক)",
+      "Request Appointment": "অ্যাপয়েন্টমেন্টের অনুরোধ পাঠান",
+      "Clicking the button opens WhatsApp with your request pre-filled. Please press Send to confirm.": "বাটনে ক্লিক করলে আপনার তথ্যসহ হোয়াটসঅ্যাপ খুলবে। নিশ্চিত করতে অনুগ্রহ করে Send চাপুন।",
+      "© 2026 Dr. S M Abu Newaz Rana. Demo design — content is illustrative.": "© ২০২৬ ডা. এস এম আবু নেওয়াজ রানা। ডেমো ডিজাইন — বিষয়বস্তু উদাহরণস্বরূপ।",
+      "BMDC Reg. A-90106": "বিএমডিসি রেজি. এ-৯০১০৬",
+
+      // placeholders
+      "Your name": "আপনার নাম",
+      "Briefly describe your concern": "সংক্ষেপে আপনার সমস্যা লিখুন"
+    };
+
+    (() => {
+      const norm = s => s.replace(/\s+/g, ' ').trim();
+      const items = [];
+
+      // collect text nodes
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode: n =>
+          n.parentElement.closest('script,style,noscript,svg') || !norm(n.nodeValue)
+            ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+      });
+      while (walker.nextNode()) {
+        const node = walker.currentNode, en = node.nodeValue;
+        items.push({
+          node, en, key: norm(en),
+          lead: en.match(/^\s*/)[0], trail: en.match(/\s*$/)[0]
+        });
+      }
+
+      // collect placeholders
+      const phs = [...document.querySelectorAll('[placeholder]')]
+        .map(el => ({ el, en: el.getAttribute('placeholder') }));
+
+      // dev helper: lists English text that has no Bangla yet
+      const missing = items.filter(i => !BN[i.key] && /[A-Za-z]{3,}/.test(i.key)).map(i => i.key);
+      if (missing.length) console.info('Not translated:', missing);
+
+      const btn = document.getElementById('langToggle');
+      let lang = 'en';
+      try { lang = localStorage.getItem('lang') || 'en'; } catch (e) { }
+
+      function setLang(l) {
+        lang = l;
+        items.forEach(i => {
+          i.node.nodeValue = l === 'bn' && BN[i.key] ? i.lead + BN[i.key] + i.trail : i.en;
+        });
+        phs.forEach(p => {
+          p.el.setAttribute('placeholder', l === 'bn' && BN[p.en] ? BN[p.en] : p.en);
+        });
+        document.documentElement.lang = l;
+        btn.textContent = l === 'bn' ? 'English' : 'বাংলা';
+        try { localStorage.setItem('lang', l); } catch (e) { }
+      }
+
+      btn.addEventListener('click', () => setLang(lang === 'bn' ? 'en' : 'bn'));
+      setLang(lang);
+    })();
   </script>
 
 </body>

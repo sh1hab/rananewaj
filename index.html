@@ -1038,7 +1038,7 @@
   <header>
     <div class="nav">
       <div class="brand">
-        <div class="brand-mark">AC</div>
+        <div class="brand-mark">-</div>
         <div>
           <div class="brand-name">Dr. S M Abu Newaz Rana</div>
           <div class="brand-sub">General, laparoscopic, breast and colorectal surgeon</div>
@@ -1147,7 +1147,7 @@
           </div>
           <div class="timeline-row">
             <div class="yr">2025</div>
-            <div class="what"><strong>FCPS (Medicine)</strong><span>Bangladesh College of Physicians &amp;
+            <div class="what"><strong>FCPS (surgery)</strong><span>Bangladesh College of Physicians &amp;
                 Surgeons</span></div>
           </div>
           <!-- <div class="timeline-row">
@@ -1273,7 +1273,7 @@
       </div>
       <div class="review-grid">
         <div class="review-card">
-          <div class="quote">"She actually explained why my sugar levels were swinging instead of just changing the
+          <div class="quote">"He actually explained why my sugar levels were swinging instead of just changing the
             dose. First doctor who's done that in years."</div>
           <div class="review-who">
             <div class="review-avatar">RH</div>
@@ -1412,24 +1412,44 @@
   </footer>
 
   <script>
-    const menuBtn = document.querySelector('.menu-btn');
-    const linksWrap = document.querySelector('.nav-links-wrap');
-    menuBtn?.addEventListener('click', () => {
-      const isOpen = linksWrap.style.display === 'flex';
-      linksWrap.style.display = isOpen ? 'none' : 'flex';
-      linksWrap.style.flexDirection = 'column';
-      linksWrap.style.position = 'absolute';
-      linksWrap.style.top = '64px';
-      linksWrap.style.right = '20px';
-      linksWrap.style.background = 'var(--ivory)';
-      linksWrap.style.border = '1px solid var(--line)';
-      linksWrap.style.padding = '20px';
-      linksWrap.style.gap = '18px';
-    });
-    document.querySelector('form.appt')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Demo only — this form is not yet connected. On the live site this will send a confirmation SMS/email.');
-    });
+    const DOCTOR_WHATSAPP = '8801629921186'; // country code + number, no "+" or dashes
+
+document.querySelector('form.appt')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name    = document.getElementById('name').value.trim();
+  const phone   = document.getElementById('phone').value.trim();
+  const chamber = document.getElementById('chamber-select').selectedOptions[0].text;
+  const date    = document.getElementById('date').value;   // yyyy-mm-dd
+  const time    = document.getElementById('time').value;   // HH:MM (24h)
+  const reason  = document.getElementById('msg').value.trim();
+
+  // Format date and time nicely
+  const prettyDate = date
+    ? new Date(date + 'T00:00:00').toLocaleDateString('en-GB', {
+        weekday: 'short', day: 'numeric', month: 'short', year: 'numeric'
+      })
+    : 'Not specified';
+
+  let prettyTime = 'Not specified';
+  if (time) {
+    const [h, m] = time.split(':').map(Number);
+    prettyTime = `${h % 12 || 12}:${String(m).padStart(2, '0')} ${h >= 12 ? 'PM' : 'AM'}`;
+  }
+
+  const message =
+`Assalamu Alaikum, I would like to request an appointment.
+
+*Name:* ${name}
+*Phone:* ${phone}
+*Chamber:* ${chamber}
+*Preferred date:* ${prettyDate}
+*Preferred time:* ${prettyTime}
+*Reason:* ${reason || 'Not specified'}`;
+
+  const url = `https://wa.me/${DOCTOR_WHATSAPP}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank', 'noopener');
+});
   </script>
 
 </body>

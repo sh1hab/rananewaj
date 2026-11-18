@@ -43,7 +43,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: center top;
     }
 
     html {
@@ -1062,6 +1062,7 @@
     html[lang="bn"] .review-card .quote {
       font-style: normal;
     }
+    #appointment { scroll-margin-top: 90px; }
   </style>
 </head>
 
@@ -1089,7 +1090,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <a href="#contact" class="nav-cta">Book Appointment</a>
+        <a href="#appointment" class="nav-cta">Book Appointment</a>
         <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">বাংলা</button>
       </div>
       <button class="menu-btn" aria-label="Menu">&#9776;</button>
@@ -1107,7 +1108,7 @@
         <p class="lede">Several years treating conditions across Dhaka — with the kind of unhurried consultation that
           catches what a five-minute visit misses.</p>
         <div class="hero-ctas">
-          <a href="#contact" class="btn-primary">Book an Appointment</a>
+          <a href="#appointment" class="btn-primary">Book an Appointment</a>
           <a href="#chamber" class="btn-secondary">See Chamber Hours</a>
         </div>
         <div class="hero-stats">
@@ -1375,7 +1376,7 @@
         </div>
       </div>
 
-      <div>
+      <div id="appointment">
         <div class="eyebrow">Request an Appointment</div>
         <h2 style="margin-bottom:20px;">Tell us when works for you</h2>
         <form class="appt">
@@ -1637,7 +1638,7 @@
 
       // dev helper: lists English text that has no Bangla yet
       const missing = items.filter(i => !BN[i.key] && /[A-Za-z]{3,}/.test(i.key)).map(i => i.key);
-      if (missing.length) console.info('Not translated:', missing);
+      // if (missing.length) console.info('Not translated:', missing);
 
       const btn = document.getElementById('langToggle');
       let lang = 'en';
